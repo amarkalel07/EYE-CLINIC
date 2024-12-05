@@ -1,0 +1,1162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* top bar starts */
+/* Background and padding for the section */
+#home {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Gradient background for a modern look */
+    color: white;
+    padding: 15px 0;
+    /* Slight rounded corners for the section */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Social Icons Hover Effect */
+.social-icons:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    color: #ee730e;
+    /* Icon color change on hover */
+}
+
+/* Spacing and alignment for the row */
+.row.align-items-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #home {
+        padding: 10px 0;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        font-size: 1.2rem;
+    }
+
+    .row.align-items-center {
+        text-align: center;
+        /* Center align the items on small screens */
+        flex-direction: column;
+        /* Stack items vertically */
+    }
+
+    .col-auto {
+        margin-bottom: 10px;
+        /* Add space between elements */
+    }
+}
+
+/* Adjust logo size */
+.logo-sm {
+    max-width: 20vw !important;
+    height: auto !important;
+}
+
+#logoindex1 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+a:hover {
+    color: #000 !important;
+}
+
+i {
+    font-size: 20px;
+}
+
+/* Remove scrollbar from the dropdown */
+.navbar .dropdown-menu {
+    max-height: none;
+    /* Removes any max-height set by Bootstrap */
+    overflow-y: visible;
+    /* Ensures no vertical scroll bar */
+}
+
+/* Optional: If you want to ensure the dropdown fits better in smaller screens */
+@media (max-width: 768px) {
+    .navbar .dropdown-menu {
+        max-height: 200px;
+        /* Set a limit for smaller screens */
+        overflow-y: auto;
+        /* Allow vertical scrolling if content exceeds */
+    }
+}
+/* top bar ends */
+
+
+/* top carousel section starts */
+
+#carouselExampleCaptions .carousel-item{
+    height: 85vh;
+}
+
+#carouselExampleCaptions .carousel-item img{
+    height: 100%;
+}
+#carouselExampleCaptions .carousel-caption{
+    /* top: 40%; */
+}
+.carousel-control-prev , .carousel-control-next{
+    top: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* top carousel section ends */
+
+
+
+/* contact and time section starts */
+.information {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for information blocks */
+/* .information:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+} */
+
+/* Styling for each info box */
+.info-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    height: 250px;
+}
+
+/* Adding a subtle background color change on hover */
+.info-box:hover {
+    /* background-color: #ff7300; */
+    background: linear-gradient(to bottom, #e8f1fc, #cfe4fb);
+    color: white;
+}
+
+/* Styling the icons */
+.info-box i {
+    color: #ee730e;
+    transition: transform 0.3s ease;
+}
+
+/* Icon hover effect */
+.info-box:hover i {
+    transform: scale(1.1);
+}
+
+/* Heading style */
+.info-box h5 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the information blocks */
+.animated {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    .information {
+        text-align: center;
+    }
+
+    .info-box h5 {
+        font-size: 20px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+    }
+
+    /* Adjust icon size for smaller screens */
+    .info-box i {
+        font-size: 2.5rem;
+    }
+}
+/* contact and time section ends */
+
+
+/* Form / appointment section starts */
+/* Overall Container */
+.appointment-form-container {
+    background: linear-gradient(to bottom, #e8f1fc, #cfe4fb);
+    border-radius: 10px;
+    padding: 30px;
+    width: 75vw;
+    margin: auto;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+}
+
+/* Form Header Tabs */
+.form-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: #f8f9fa;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Form Fields */
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+label span {
+    color: red;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+}
+
+/* Mobile Input */
+.mobile-input {
+    display: flex;
+    gap: 5px;
+}
+
+.country-code {
+    width: 15%;
+    border-right: 0;
+}
+
+#mobile {
+    width: 85%;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #003d80;
+    transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Form / appointment section ends */
+
+
+/* about section starts*/
+/* #about {
+    position: relative;
+    margin-top: 60px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ee730e;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    line-height: 1.7;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+} */
+
+/* Hover effect on the 'Read More' button */
+/* .btn:hover {
+    background-color: #ee730e;
+    color: white;
+    transform: translateY(-5px);
+} */
+
+/* Image Styling */
+/* .doctorimg {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* Hover effect for image */
+/* .doctorimg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+/* Animations */
+/* @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+/* Apply Animations */
+/* .animated {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.animated.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animated.fadeInRight {
+    animation-name: fadeInRight;
+} */
+
+/* Media Query for smaller screens */
+/* @media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .doctorimg {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+} */
+/* about section ends*/
+
+
+/* Service section starts*/
+#services {
+    /* background-color: #2B343B; */
+    /* background-color: #0a3d62; */
+    /* background-color: #8ac5ef; */
+    background: linear-gradient(to bottom, #e8f1fc, #cfe4fb);
+}
+
+/* Animation for cards */
+.animate-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card {
+    height: 450px;
+}
+
+#services .animate-card img {
+    height: 240px;
+}
+
+.animate-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Animation */
+#servsec1 {
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Animation */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* <!-- Adding custom CSS for design improvement --> */
+.service-img {
+    border-bottom: 5px solid #007bff;
+    /* Blue border at the bottom of images */
+    transition: transform 0.3s ease-in-out;
+}
+
+#services .card-body {
+    border-radius: 0 0 15px 15px;
+}
+
+#services .card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1rem;
+    text-align: center;
+    color: #ddd;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.animate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-white {
+    color: white !important;
+}
+/* Service section ends*/
+
+
+/* gallary section starts */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 310px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 24px;
+}
+/* gallary section ends */
+
+
+/* doctors panel starts*/
+.doctorpanel {
+    height: 470px;
+}
+
+.doctorpanel img {
+    height: 300px !important;
+}
+
+/* <!-- Adding custom CSS for design improvement --> */
+.card-body {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    /* Dark background for better text contrast */
+    border-radius: 0 0 15px 15px;
+}
+
+.docpimg {
+    border-bottom: 5px solid #007bff;
+    /* Blue border at the bottom of images */
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctorpanel h3{
+    font-size: 1.3rem !important; 
+    font-weight: bold;
+}
+
+.card-text {
+    color: #ddd;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.animate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-white {
+    color: white !important;
+}
+
+/* <!-- Adding some custom CSS to enhance the design --> */
+.containerteam {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem;
+}
+/* doctors panel ends*/
+
+/* hospital team section start */
+#hospitalteam .card-title{
+    color: #dc3545;
+    font-size: 20px;
+    text-align: center;
+}
+
+#hospitalteam .card-text{
+    color: black;
+}
+
+#hospitalteam .card{
+    height: 350px;
+}
+
+#hospitalteam img{
+    height: 200px;
+}
+/* hospital team section end */
+
+/* video education starts*/
+/* .video-education {
+    padding-bottom: 40px;
+    background-color: #000000;
+}
+
+.video-education .video-wrapper {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-education iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    display: block;
+} */
+/* video education ends*/
+
+
+/* Testimonials section starts */
+/* #testimonials {
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 40px;
+} */
+
+/* h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+} */
+
+.testimonial-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 40px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ee730e;
+    margin-top: 10px;
+}
+
+
+/* Animations for carousel items */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for carousel items */
+/* .carousel-item:hover .testimonial-content {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* Style for Carousel Background */
+#testimonialCarousel {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Make the testimonial section responsive */
+@media (max-width: 768px) {
+    .small{
+        display: block;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+    }
+
+    .testimonial-author {
+        font-size: 18px;
+    }
+
+    /* .carousel-item {
+        padding: 30px 20px;
+    } */
+
+    #testimonialCarousel .carousel-item ,#testimonialCarousel .testimonial-content{
+        padding: 27px 0px !important;
+    }
+}
+/* Testimonials section ends */
+
+
+/* history section starts */
+.history-section {
+    background: linear-gradient(to right, #e8f8f5, #fef9e7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.5s ease;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    animation: fadeInDown 1.5s ease;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.history-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    animation: fadeIn 2s ease;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.history-content span {
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .history-content p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+#historyimg img{
+    height: 230px;
+}
+
+#historyimg img:hover{
+    scale: 1.03;
+}
+
+/* history section ends */
+
+
+/* footer section starts*/
+#footer-3 {
+    background-color: #2B343B;
+}
+
+/* General Footer Styles */
+#footer-3 {
+    /* background: #0a3d62;  */
+    /* Dark background for the footer */
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-info h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    font-size: 17px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.footer-socials-links i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials-links a:hover i {
+    transform: scale(1.2);
+}
+
+#footerhr {
+    border: 2px solid #ff7300;
+    width: 60px;
+    margin: 10px 0;
+}
+
+#footerhr1 {
+    border: 2px solid #ee730e;
+    margin-top: 30px;
+}
+
+/* Contact Info Icons */
+#icons1 i {
+    font-size: 1.5rem;
+    color: #ee730e;
+    margin-right: 10px;
+}
+
+#icons1 span {
+    font-size: 17px;
+}
+
+/* Footer Links & Map */
+.footer-links iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.footer-links iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Effects for Footer Info and Social Icons */
+.footer-info:hover,
+.footer-socials-links:hover,
+.footer-links:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#copy1 {
+    font-size: 14px;
+    padding: 20px 0;
+    color: white;
+}
+
+.bottom-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Animating footer items */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#footer-3 {
+    animation: slideUp 1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-info h3 {
+        font-size: 22px;
+    }
+
+    .footer-socials-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-socials-links a {
+        margin: 0 10px;
+    }
+
+    .footer-info p {
+        font-size: 16px;
+    }
+
+    .footer-links iframe {
+        height: 250px;
+    }
+}
+/* footer section ends*/
+
+
+/* Base Styles */
+#basecallbtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #efefef;
+    z-index: 1000;
+    display: none; /* Default: Hidden */
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#basecallbtn .row {
+    display: flex;
+    margin: 0;
+}
+
+#basecallbtn .call-btn,
+#basecallbtn .whatsapp-btn {
+    flex: 1; /* Each takes 50% width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#basecallbtn .call-btn {
+    background-color: #00A3C8;
+    border-right: 1px solid #fff;
+}
+
+#basecallbtn .whatsapp-btn {
+    background-color: #2ab201;
+}
+
+#basecallbtn img {
+    vertical-align: middle;
+}
+
+/* Media Query */
+@media (max-width: 425px) {
+    #basecallbtn {
+        display: block; /* Show only for small screens */
+    }
+
+    #basecallbtn a {
+        font-size: 12px;
+    }
+
+    #basecallbtn img {
+        height: 20px;
+        width: 20px;
+    }
+    .logo-sm {
+        max-width: 40vw !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px ) and (min-width:425px){
+    .logo-sm {
+        max-width: 40vw !important;
+        height: auto !important;
+    }
+}
+
+
